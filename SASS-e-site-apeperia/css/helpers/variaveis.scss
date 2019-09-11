@@ -1,0 +1,17 @@
+
+//Variáveis do Sass para cores
+//$cor-padrao: adjust-hue(#c24e4b, 20%);
+$cor-padrao: darken(#c34d4a, 10%); //O darken serve para deixar a cor mais escura,
+																	 // sem perder o valor hexadecimal da mesma!
+//$cor-planos: lighten(#1e2c35, 0); //#1e2c35
+//$corbranca: #fff; //#fff
+
+$cor-planos: saturate(#1e2c35, 0); //#1e2c35
+
+$corbranca: complement(#fff);
+
+//$ponto-de-quebra: 950px; <<<<<<pode ser usado assim também //Celular
+
+$mq-mobile: "(max-width: 980px)";
+
+$tamanho-da-fonte-padrao: 16px;

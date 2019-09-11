@@ -1,0 +1,3 @@
+abr 07, 2019 7:52:35 PM criacaodelogs.CriacaoDeLogs main
+INFORMAÇÕES: 
+Esta é uma mensagem informativa de um arquivo log

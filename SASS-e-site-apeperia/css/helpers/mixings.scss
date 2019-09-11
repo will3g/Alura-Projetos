@@ -1,0 +1,32 @@
+
+//Mixins para setar valores
+@mixin borda-arredondada($raio-borda: 0.5em){
+	//Borda para botões e Textboxs
+	-webkit-border-radius: $raio-borda;
+	-moz-border-radius: $raio-borda;
+  border-radius: $raio-borda;
+	//Obs: botão destaque tem 50px
+}
+
+@mixin sombra-padrao{
+	//Sombra padrão para botões e outros objetos
+	-webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+}
+
+@mixin image-replacement($distancia: -9999px){
+	//Nomeação de imagens
+	text-indent: $distancia;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+@mixin tamanho-botao($largura: 210px,
+											 $altura: 38px,
+											  $tamanho-fonte: 1.2em){
+	//Tamanho botão (largura x altura) e tamanho fonte
+	width: $largura;
+  height: $altura;
+  font-size: $tamanho-fonte;
+}

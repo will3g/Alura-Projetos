@@ -1,0 +1,53 @@
+/** Sobre **/
+.sobre {
+  background: #ebebeb;
+
+	p {
+	  font: .9em/1.8 sans-serif;
+
+		&:first-child {
+		  margin-bottom: 3em;
+		}
+	}
+}
+
+.duas-colunas {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  columns: 1;
+
+	h3 {
+	  margin: 0;
+	}
+}
+
+.plataformas {
+  padding: 0;
+
+	li {
+	  display: inline-block;
+	  width: 50px;
+	  height: 60px;
+		@include image-replacement;
+	  background-position: center;
+	  margin: 1em 1.5em 0 0;
+
+		&:nth-child(1) {
+		  background-image: url(../imagens/logo-apple.png);
+		}
+
+		&:nth-child(2) {
+		  background-image: url(../imagens/logo-android.png);
+		}
+
+		&:nth-child(3) {
+		  background-image: url(../imagens/logo-windows.png);
+		}
+
+		&:nth-child(4) {
+		  background-image: url(../imagens/logo-blackberry.png);
+		}
+	}
+
+}

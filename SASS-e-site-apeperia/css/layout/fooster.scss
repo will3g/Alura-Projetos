@@ -1,0 +1,96 @@
+/** Footer **/
+footer {
+  display: block;
+  position: relative;
+
+	a {
+	  color: $corbranca;
+	  text-decoration: none;
+	}
+
+	.container {
+	  padding-top: 3 * $tamanho-da-fonte-padrao;
+	  height: 6.5 * $tamanho-da-fonte-padrao;
+	  position: relative;
+
+		img {
+		  width: 250px;
+		}
+	}
+}
+
+footer::after {
+  content: "";
+  background: url(../imagens/fundo-rodape.png);
+  opacity: .02;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+footer::before {
+  content: "";
+  background: $cor-planos;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.menu-rodape,
+.social {
+  position: absolute;
+
+	li {
+	  display: inline;
+	}
+}
+
+.menu-rodape {
+  top: 1em;
+  right: 0;
+
+	ul li {
+	  display: inline-block;
+	  margin-left: 2em;
+	}
+}
+
+.social {
+  bottom: 0;
+  right: 0;
+
+	li {
+	  float: left;
+
+		a {
+		  display: block;
+		  width: 55px;
+		  height: 55px;
+		  @include image-replacement;
+		  margin-left: 1em;
+		}
+	}
+
+a {
+  	background-position: top;
+		background-size: 50px 50px;
+	}
+
+	a[href*="facebook"] {
+	  background-image: url(../imagens/facebook.png);
+	}
+
+	a[href*="twitter"] {
+	  background-image: url(../imagens/twitter.png);
+	}
+
+	a[href*="instagram"] {
+	  background-image: url(../imagens/instagram.png);
+	}
+}

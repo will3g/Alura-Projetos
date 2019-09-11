@@ -1,0 +1,81 @@
+html {
+    font-size: 1rem;
+}
+
+@include media-breakpoint-up(sm) {
+    html {
+        font-size: 1.2rem;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    html {
+        font-size: 1.4rem;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    html {
+        font-size: 1.6rem;
+    }
+}
+
+.carrossel {
+    object-fit: cover;
+    /* Ocupa todo o espaço do elemento pai */
+    height: 400px;
+}
+
+#imagem-carrossel-um {
+    /* Responsavel pela a posição da imagem no carrossel */
+    object-position: 0 70%;
+    /* Primeiro parâmetro eixo X e segundo parâmetro eixo Y */
+}
+
+.fonte-titulo {
+    font-family: 'Pacifico', cursive;
+}
+
+.cor-especial {
+    color: darkred!important;
+    /* O !important passa por cima da cascata do bootstrap, 
+    em outras palavras essa classe tem mais prioridade em questão da cor */
+}
+
+.borda-cor-especial {
+    border-color: darkred;
+}
+
+.backgoud-cor-especial {
+    color: white;
+    background: darkred;
+}
+
+.backgoud-cor-especial:hover {
+    color: white;
+    background: rgb(170, 21, 21);
+    box-shadow: 0 0 6px black;
+}
+
+.card-tamanho {
+    max-width: 18rem;
+}
+
+.card-imagem-tamanho {
+    object-fit: cover;
+    /* Ocupa todo o espaço do elemento pai */
+    height: 200px;
+}
+
+.thumb-redondo {
+    border-radius: 100%;
+}
+
+.img-thumbnail {
+    max-height: 200px;
+}
+
+.icones-rede-social:hover {
+    box-shadow: 0 0 8px #f8f9fa;
+    text-decoration: none;
+}

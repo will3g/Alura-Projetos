@@ -1,0 +1,79 @@
+
+/** Header **/
+header {
+  border-top: 5px solid $cor-padrao;
+  background: rgba($cor-planos, 0.8);
+  height: 90px;
+  width: 100%;
+  position: absolute;
+
+	.container {
+	  position: relative;
+
+		@media #{$mq-mobile}{
+			position: static;
+		}
+	}
+
+		@media #{$mq-mobile}{
+					height: auto;
+
+					h1 {
+						max-width: 50%;
+						margin: 0 auto;
+
+						img {
+							max-width: 100%;
+							margin: .5em auto;
+							display: block;
+						}
+					}
+			}
+}
+
+.menu-principal { //Técnica nesting, quando mudar o nome de menu-principal
+									//mudará em todos os filhos no CSS
+  position: absolute;
+  right: 0;
+  top: -.5em;
+  font-size: 1.2em;
+  font-weight: lighter;
+
+	@media #{$mq-mobile} {
+		position: static;
+		display: block;
+		text-align: center;
+
+		li {
+			margin: .4em;
+
+			form {
+				width: auto;
+			}
+		}
+
+		form {
+			width: auto;
+		}
+	}
+
+	ul {
+	  padding-left: 0;
+	}
+
+	li {
+	  display: inline-block;
+	  width: 5em;
+	}
+
+	a {
+	  color: white;
+	  text-decoration: none;
+
+			&:hover { //O & indica um filho de 'a'
+			  font-weight: bold;
+				border-bottom: 5px solid rgba(white, 0.3);
+			}
+	}
+
+}

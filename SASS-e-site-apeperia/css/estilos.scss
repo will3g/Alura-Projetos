@@ -1,0 +1,21 @@
+//Este arquivo serve como uma ponte de conexão
+//para outros arquivos e pastas organizadas
+@import "helpers/mixings";
+@import "helpers/variaveis";
+
+@import "base/normalize";
+@import "layout/geral";
+@import "layout/header";
+@import "layout/destaque";
+@import "layout/sobre";
+@import "layout/planos";
+@import "layout/blog";
+@import "layout/contatos";
+@import "layout/fooster";
+
+
+//sprite de imagens
+//$sprite-spacing: 2px; //Essa linha é responsável pelo espaçamento das imagens
+//@import "sprite/*.png";
+// 1- Salve  // 2 - verifique na pasta css/imagens o arquivo>>>> sprite-s1e1f3a7a9e
+// 3 - pronto, as duas imagens estão em uma única imagem.png

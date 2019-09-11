@@ -1,0 +1,43 @@
+.app {
+    background: #f1f1f1;
+    /* O .app é o container (body), com [ display: grid ] estamos dizendo para ele se comportar como grid */
+    display: grid;
+    /*Aqui estamos setando as fontes que queremos utilizar*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*Aqui estamos setando as áreas do grid, NÃO PODEM SER SEPARADAS COM VÍRGULAS*/
+    grid-template-areas: "cabecalho" "conteudo" "rodape";
+    /*Como é a página principal, vamos ter somente uma coluna principal, com outras colunas ou linhas dentro dela*/
+    grid-template-columns: auto;
+    /*Aqui estamos setando os valores de tamnhos, o primeiro parâmetro é referente ao cabeçalho de 50px, o segundo
+    parâmetro é referente ao conteudo de 100vh e o ultimo parâmetro é referente ao rodapé que é automático*/
+    /* 100vh indica que o conteúdo vai ter o tamanho da página inteira */
+    /* grid-template-rows: 50px 100vh auto; */
+    grid-template-rows: 50px auto auto;
+}
+
+.cabecalho {
+    /*Com grid-area, estamos dizendo que esse .cabecalho é o grid-template-areas: [ "cabecalho" ] "conteudo" "rodape";*/
+    /* O contúdo do cabeçalho não vaza para a parte de conteúdo */
+    grid-area: cabecalho;
+    align-items: center;
+    display: flex;
+    padding: 0 2rem;
+}
+
+.conteudo {
+    /*Com grid-area, estamos dizendo que esse .conteudo é o grid-template-areas: "cabecalho" [ "conteudo" ] "rodape";*/
+    /* O contúdo do conteudo não vaza para a parte de cabecalho e rodapé */
+    grid-area: conteudo;
+    padding: 0 2rem;
+}
+
+.rodape {
+    /*Com grid-area, estamos dizendo que esse .rodape é o grid-template-areas: "cabecalho" "conteudo" [ "rodape" ];*/
+    /* O contúdo do rodape não vaza para a parte de cabecalho e conteudo */
+    grid-area: rodape;
+    background: #fdfdfd;
+    color: #333333;
+    font-size: .8rem;
+    padding: 1rem;
+    text-align: center;
+}

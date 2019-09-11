@@ -1,0 +1,174 @@
+/** Cabçalho Principal **/
+.cabecalhoPrincipal-nav {
+  display: flex;
+}
+
+.cabecalhoPrincipal .container {
+  display: flex;
+  /* Ativa o Flexbox */
+  justify-content: space-between;
+  /* Coloca espaço entre os elementos */
+  align-items: center;
+  /* Centraliza os itens */
+}
+
+
+/** Conteúdo Principal **/
+.conteudoPrincipal-cursos{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.conteudoPrincipal-cursos-link{
+	width: 23%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n){
+	margin-right: 0;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n+1){
+	margin-left: 0;
+}
+
+
+/** Rodapé Principal da página **/
+.rodapePrincipal-navMap-list{
+	display: flex;
+	/*flex-direction: column;
+	flex-wrap: wrap;*/
+	flex-flow: column wrap; /* Flexflow substitui flex-direction e flex-wrap */
+	height: 260px;
+
+}
+
+
+/** Rodapé patrocinadores + form da página **/
+.rodapePrincipal-patrocinadores .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+	width: 60%;
+	margin-right: 15%;
+}
+
+.rodapePrincipal-contatoForm{
+	width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+	display: flex;
+}
+
+
+/** Parte do vídeo + botão + vantagens **/
+.videoSobre .container{
+	display: flex;
+}
+
+.videoSobre-sobre{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	flex-grow: 1;
+	margin-left: 10px;
+}
+
+.videoSobre-sobre-title{
+	/* flex-grow divide o espaço para os itens,
+   * se for [ objeto a >>> flex-grow = 10; ]
+	 e outro [ objeto b >>> flex-grow = 1; ],
+	 * o espaço livre total será dividido por 11,
+	 * 10 desse espaço ficará para o objeto a,
+	 * e 1 do restante do espaço ficará para o objeto b
+	 */
+	flex-grow: 1;
+}
+
+.videoSobre-sobre-list{
+	flex-grow: 1;
+	font-weight: bold;
+	vertical-align:middle;
+}
+
+.videoSobre-video{
+	flex-grow: 1;
+	flex-shrink: 2;
+}
+
+/*	PARTE MOBILE	*/
+@media(max-width: 768px){
+ /*	Temos atalhos para flex-grow e flex-shrink
+	*	é só digitar >>> Flex: flex-grow flex-shrink
+	* fincando assim >>> [ Exemplo -> Flex: 1 1; ]
+	* e temos como terceiro argumento o flex-basis
+	* que é como um width para a propriedade flex,
+	* fincando >>> flex flex-grow flex-shrink flex-basis
+	*/
+
+
+	/** Cabçalho Principal **/
+	.cabecalhoPrincipal-nav{
+		flex-direction: column;  /* temos que mudar a direção do flex direction para column */
+	}
+
+	.cabecalhoPrincipal .container{
+		flex-direction: column; /* temos que mudar a direção do flex direction para column */
+		align-items: initial; /* O valor initial reseta o aling-itens, é como se fosse o "none" */
+		text-align: center;
+	}
+
+	.cabecalhoPrincipal-nav-link-app{
+		order: -1;
+		font-weight: bold;
+	}
+	/** Conteúdo Principal **/
+	.conteudoPrincipal-cursos{
+		flex-direction: column;
+	}
+
+	.conteudoPrincipal-cursos-link{
+		width: 100%;
+	}
+
+	/** video + vantagens + botão **/
+	.videoSobre .container {
+    flex-direction: column;
+	}
+
+	.videoSobre-video{
+		margin: 0 auto;
+	}
+
+	/** Rodapé da página **/
+	.rodapePrincipal-navMap-list{
+		height: auto;
+	}
+
+	/** Rodapé patrocinadores + form da página **/
+	.rodapePrincipal-patrocinadores .container {
+	    flex-direction: column;
+			align-items: center;
+	}
+
+	/** Rodapé patrocinadores **/
+	.rodapePrincipal-patrocinadores-list{
+		width: 65%;
+		margin-right: 35%;
+		margin-bottom: 5%;
+	}
+
+	.rodapePrincipal-contatoForm {
+	    width: auto;
+			margin: 0;
+	}
+
+	.rodapePrincipal-contatoForm-fieldset {
+	    justify-content:center;
+	}
+}

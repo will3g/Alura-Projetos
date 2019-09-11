@@ -1,0 +1,84 @@
+.populares {
+    padding: 1rem 0;
+}
+
+.populares__conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    /* Aqui estamos dizendo que o conteudo só fica aqui dentro e não pra fora */
+    grid-area: conteudo;
+    padding: 1rem 0;
+}
+
+.populares__card {
+    background: #ffff;
+    display: grid;
+    grid-template-areas: "card-imagem" "card-corpo";
+    grid-template-columns: 100%;
+    /* O primeiro parâmetro se refere a "card-imagem" (imagem) e o segundo ao "card-corpo" (conteúdo)*/
+    /* grid-template-rows: 173px auto;
+    margin-right: 0.8rem;
+    width: calc(20% - 0.65rem); */
+}
+
+.populares__card:last-child {
+    /* Aqui estamos retirando a margem do ultimo elemento da lista, que é o quinto elemento */
+    margin-right: 0;
+}
+
+.populares__card___imagem {
+    grid-area: card-imagem;
+    height: 100%;
+    width: 100%
+}
+
+.populares__card___corpo {
+    /* Adicionamos grid dentro de cada card */
+    display: grid;
+    /* Aqui estamos dizendo que esse bloco se refere ao card-corpo de .populares__card */
+    grid-area: card-corpo;
+    grid-row-gap: .5rem;
+    /* Aqui estamos setando o cabeçalho do card e o conteúdo do card, que está via html*/
+    grid-template-areas: "card-cabecalho" "card-conteudo";
+    /* Aqui estamos definindo 50px para o cabeçalho do card e auto para o conteúdo do card */
+    grid-template-rows: 50px auto;
+    padding: .75rem;
+}
+
+.populares__card___titulo {
+    color: #333333;
+    font-size: 1.5rem;
+}
+
+.populares__card___data {
+    font-size: .9rem;
+    color: #808080;
+}
+
+.populares__card___descricao {
+    color: #333333;
+    line-height: 1.5;
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+.populares__titulo {
+    font-weight: 500;
+}
+
+.populares__icone {
+    margin-right: .25rem;
+}
+
+.populares__cabecalho {
+    border-bottom: 1px solid #dcdcdc;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.populares__botao {
+    background: transparent;
+    border: none;
+    color: #333333;
+}
